@@ -1,0 +1,21 @@
+{
+    "name": "k1low/enumm",
+    "description": "Enumm: Enum(model) plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "enum", "model"],
+    "homepage": "https://github.com/k1LoW/Enumm",
+    "license": "MIT",
+    "authors": [
+	    {
+	        "name": "Ken'ichiro Oyama",
+	        "homepage": "https://github.com/k1LoW",
+	        "role": "Author"
+	    }
+    ],
+    "require": {
+        "composer/installers": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
