@@ -14,9 +14,7 @@ class EnummBehavior extends ModelBehavior {
             return true;
         }
         foreach ($model->enums as $fieldName => $values) {
-            if (!is_array($values)) {
-                $values = Configure::read($values);
-            }
+            $values = $this->getEnum($model, $fieldName);
             if (empty($model->validate[$fieldName])) {
                 $model->validate[$fieldName] = array();
             }
@@ -33,5 +31,17 @@ class EnummBehavior extends ModelBehavior {
                 'last' => true,
             );
         }
+    }
+
+    /**
+     * getEnum
+     *
+     */
+    public function getEnum(Model $model, $fieldName){
+        $values = $model->enums[$fieldName];
+        if (!is_array($values)) {
+            $values = Configure::read($values);
+        }
+        return $values;
     }
 }
