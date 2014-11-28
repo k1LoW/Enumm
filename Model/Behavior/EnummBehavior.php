@@ -20,7 +20,7 @@ class EnummBehavior extends ModelBehavior {
             // for Cakeplus
             $validateRules = $model->validate[$fieldName];
             if (isset($validateRules) && !is_array($validateRules)){
-                $model->validate[$fieldName] = [$validateRules];
+                $model->validate[$fieldName] = array($validateRules);
             }
 
             $model->validate[$fieldName]['inListEnumValidate'] = array(
