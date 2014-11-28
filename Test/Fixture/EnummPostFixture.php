@@ -14,7 +14,7 @@ class EnummPostFixture extends CakeTestFixture {
     public $records = array(
         array(
             'id' => 1,
-            'category' => 'daily',
+            'category' => 'diary',
             'title' => 'Title',
             'body' => 'Enumm Test',
             'created' => '2014-08-23 17:44:58',

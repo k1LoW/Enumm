@@ -10,8 +10,8 @@ class EnummPost extends CakeTestModel{
 
     public $enums = array(
         'category' => array(
-            'daily' => 'Daily',
-            'news' => 'News',
+            'dairy' => 'My Diary',
+            'news' => 'News Topic',
         ),
     );
 }

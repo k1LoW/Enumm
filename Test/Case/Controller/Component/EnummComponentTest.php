@@ -55,8 +55,8 @@ class EnummComponentTest extends CakeTestCase{
     public function testSetEnums(){
         $this->Controller->EnummPost->enums = array(
             'category' => array(
-                'daily' => 'Daily',
-                'news' => 'News',
+                'dairy' => 'My Diary',
+                'news' => 'News Topic',
             ),
         );
         $this->Controller->Enumm->initialize($this->Controller);
@@ -69,8 +69,8 @@ class EnummComponentTest extends CakeTestCase{
      */
     public function testSetEnumsWithConfigure(){
         Configure::write('Enumm.cateogries', array(
-            'daily' => 'Daily',
-            'news' => 'News',
+            'dairy' => 'My Diary',
+            'news' => 'News Topic',
         ));
         $this->Controller->EnummPost->enums = array(
             'category' => 'Enumm.cateogries',
