@@ -17,6 +17,10 @@ class EnummBehavior extends ModelBehavior {
             if (!is_array($values)) {
                 $values = Configure::read($values);
             }
+            if (empty($model->validate[$fieldName])) {
+                $model->validate[$fieldName] = array();
+            }
+
             // for Cakeplus
             $validateRules = $model->validate[$fieldName];
             if (isset($validateRules) && !is_array($validateRules)){
