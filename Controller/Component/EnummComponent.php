@@ -43,7 +43,11 @@ class EnummComponent extends Component {
             if (!is_array($values)) {
                 $values = Configure::read($values);
             }
-            $this->controller->set(Inflector::pluralize($fieldName), $values);
+
+            $varName = Inflector::variable(
+                Inflector::pluralize(preg_replace('/_id$/', '', $fieldName))
+            );
+            $this->controller->set($varName, $values);
         }
     }
 
