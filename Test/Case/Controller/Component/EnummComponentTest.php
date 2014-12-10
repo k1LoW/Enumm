@@ -79,4 +79,19 @@ class EnummComponentTest extends CakeTestCase{
         $this->assertTrue(array_key_exists('categories', $this->Controller->viewVars));
     }
 
+    /**
+     * testUnderscoreFieldEnum
+     *
+     */
+    public function testUnderscoreFieldEnum(){
+        $this->Controller->EnummPost->enums = array(
+            'programing_language' => array(
+                'php' => 'PHP',
+                'js' => 'JavaScript',
+            ),
+        );
+        $this->Controller->Enumm->initialize($this->Controller);
+        $this->assertTrue(array_key_exists('programingLanguages', $this->Controller->viewVars));
+    }
+
 }
