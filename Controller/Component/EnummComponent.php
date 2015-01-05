@@ -32,7 +32,7 @@ class EnummComponent extends Component {
      *
      */
     public function setEnums(){
-        if (empty($this->controller->modelClass)) {
+        if (empty($this->controller->modelClass) || empty($this->controller->uses)) {
             return;
         }
         $model = ClassRegistry::init($this->controller->modelClass);
